@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Page not found - TechStore">
+    <title>404 - Page Not Found - TechStore</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <a href="index.html">TechStore</a>
+            </div>
+            <div class="nav-menu" id="nav-menu">
+                <a href="index.html" class="nav-link">Home</a>
+                <a href="products.html" class="nav-link">Products</a>
+                <a href="about.html" class="nav-link">About</a>
+                <a href="contact.html" class="nav-link">Contact</a>
+                <a href="blog.html" class="nav-link">Blog</a>
+                <a href="cart.html" class="nav-link cart-link">
+                    <i class="fas fa-shopping-cart"></i>
+                    <span class="cart-count">0</span>
+                </a>
+                <a href="wishlist.html" class="nav-link">
+                    <i class="fas fa-heart"></i>
+                </a>
+                <a href="login.html" class="nav-link">
+                    <i class="fas fa-user"></i>
+                </a>
+            </div>
+            <div class="nav-toggle" id="nav-toggle">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- 404 Error Section -->
+    <section class="error-section">
+        <div class="container">
+            <div class="error-content">
+                <div class="error-animation">
+                    <div class="error-number">404</div>
+                    <div class="error-icon">
+                        <i class="fas fa-exclamation-triangle"></i>
+                    </div>
+                </div>
+                
+                <div class="error-text">
+                    <h1>Oops! Page Not Found</h1>
+                    <p>The page you're looking for seems to have wandered off into the digital void. Don't worry, even the best technology sometimes takes unexpected paths!</p>
+                    
+                    <div class="error-actions">
+                        <a href="index.html" class="btn btn-primary">
+                            <i class="fas fa-home"></i>
+                            Go Home
+                        </a>
+                        <a href="products.html" class="btn btn-outline">
+                            <i class="fas fa-shopping-bag"></i>
+                            Browse Products
+                        </a>
+                        <button class="btn btn-secondary" onclick="history.back()">
+                            <i class="fas fa-arrow-left"></i>
+                            Go Back
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Search Section -->
+    <section class="error-search">
+        <div class="container">
+            <div class="search-container">
+                <h2>Still looking for something?</h2>
+                <p>Try searching for what you need:</p>
+                <div class="search-box large">
+                    <input type="text" id="error-search" placeholder="Search for products, categories, or help topics...">
+                    <button type="button" id="error-search-btn">
+                        <i class="fas fa-search"></i>
+                        Search
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Quick Links -->
+    <section class="quick-links">
+        <div class="container">
+            <h2>Popular Destinations</h2>
+            <div class="links-grid">
+                <a href="products.html" class="link-card">
+                    <div class="link-icon">
+                        <i class="fas fa-laptop"></i>
+                    </div>
+                    <h3>All Products</h3>
+                    <p>Browse our complete collection</p>
+                </a>
+                
+                <a href="category.html?cat=laptops" class="link-card">
+                    <div class="link-icon">
+                        <i class="fas fa-laptop"></i>
+                    </div>
+                    <h3>Laptops</h3>
+                    <p>High-performance computers</p>
+                </a>
+                
+                <a href="category.html?cat=smartphones" class="link-card">
+                    <div class="link-icon">
+                        <i class="fas fa-mobile-alt"></i>
+                    </div>
+                    <h3>Smartphones</h3>
+                    <p>Latest mobile technology</p>
+                </a>
+                
+                <a href="category.html?cat=audio" class="link-card">
+                    <div class="link-icon">
+                        <i class="fas fa-headphones"></i>
+                    </div>
+                    <h3>Audio</h3>
+                    <p>Premium sound devices</p>
+                </a>
+                
+                <a href="about.html" class="link-card">
+                    <div class="link-icon">
+                        <i class="fas fa-info-circle"></i>
+                    </div>
+                    <h3>About Us</h3>
+                    <p>Learn more about TechStore</p>
+                </a>
+                
+                <a href="contact.html" class="link-card">
+                    <div class="link-icon">
+                        <i class="fas fa-envelope"></i>
+                    </div>
+                    <h3>Contact</h3>
+                    <p>Get in touch with us</p>
+                </a>
+                
+                <a href="faq.html" class="link-card">
+                    <div class="link-icon">
+                        <i class="fas fa-question-circle"></i>
+                    </div>
+                    <h3>FAQ</h3>
+                    <p>Find answers to common questions</p>
+                </a>
+                
+                <a href="blog.html" class="link-card">
+                    <div class="link-icon">
+                        <i class="fas fa-blog"></i>
+                    </div>
+                    <h3>Tech Blog</h3>
+                    <p>Latest tech news and reviews</p>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Help Section -->
+    <section class="help-section">
+        <div class="container">
+            <div class="help-content">
+                <h2>Need Help?</h2>
+                <p>If you can't find what you're looking for, our customer service team is here to help.</p>
+                
+                <div class="help-options">
+                    <div class="help-option">
+                        <div class="help-icon">
+                            <i class="fas fa-phone"></i>
+                        </div>
+                        <h3>Call Us</h3>
+                        <p>Speak with our support team</p>
+                        <a href="tel:+15551234567" class="btn btn-outline">
+                            Call (555) 123-4567
+                        </a>
+                    </div>
+                    
+                    <div class="help-option">
+                        <div class="help-icon">
+                            <i class="fas fa-envelope"></i>
+                        </div>
+                        <h3>Email Support</h3>
+                        <p>Send us your questions</p>
+                        <a href="mailto:support@techstore.com" class="btn btn-outline">
+                            Email Us
+                        </a>
+                    </div>
+                    
+                    <div class="help-option">
+                        <div class="help-icon">
+                            <i class="fas fa-comments"></i>
+                        </div>
+                        <h3>Live Chat</h3>
+                        <p>Chat with us in real-time</p>
+                        <button class="btn btn-outline" id="live-chat-404">
+                            Start Chat
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Featured Products -->
+    <section class="featured-products">
+        <div class="container">
+            <h2>While You're Here...</h2>
+            <p>Check out some of our most popular products</p>
+            <div class="product-grid">
+                <div class="product-card" data-product-id="1">
+                    <div class="product-image">
+                        <div class="placeholder-image">
+                            <i class="fas fa-laptop"></i>
+                        </div>
+                        <button class="wishlist-btn" data-product-id="1">
+                            <i class="fas fa-heart"></i>
+                        </button>
+                    </div>
+                    <div class="product-info">
+                        <h3>Premium Laptop</h3>
+                        <p class="product-price">$1,299.99</p>
+                        <button class="btn btn-primary add-to-cart" data-product-id="1">Add to Cart</button>
+                    </div>
+                </div>
+                
+                <div class="product-card" data-product-id="2">
+                    <div class="product-image">
+                        <div class="placeholder-image">
+                            <i class="fas fa-mobile-alt"></i>
+                        </div>
+                        <button class="wishlist-btn" data-product-id="2">
+                            <i class="fas fa-heart"></i>
+                        </button>
+                    </div>
+                    <div class="product-info">
+                        <h3>Smartphone Pro</h3>
+                        <p class="product-price">$899.99</p>
+                        <button class="btn btn-primary add-to-cart" data-product-id="2">Add to Cart</button>
+                    </div>
+                </div>
+                
+                <div class="product-card" data-product-id="3">
+                    <div class="product-image">
+                        <div class="placeholder-image">
+                            <i class="fas fa-headphones"></i>
+                        </div>
+                        <button class="wishlist-btn" data-product-id="3">
+                            <i class="fas fa-heart"></i>
+                        </button>
+                    </div>
+                    <div class="product-info">
+                        <h3>Wireless Headphones</h3>
+                        <p class="product-price">$299.99</p>
+                        <button class="btn btn-primary add-to-cart" data-product-id="3">Add to Cart</button>
+                    </div>
+                </div>
+                
+                <div class="product-card" data-product-id="4">
+                    <div class="product-image">
+                        <div class="placeholder-image">
+                            <i class="fas fa-tablet-alt"></i>
+                        </div>
+                        <button class="wishlist-btn" data-product-id="4">
+                            <i class="fas fa-heart"></i>
+                        </button>
+                    </div>
+                    <div class="product-info">
+                        <h3>Tablet Pro</h3>
+                        <p class="product-price">$599.99</p>
+                        <button class="btn btn-primary add-to-cart" data-product-id="4">Add to Cart</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>TechStore</h3>
+                    <p>Your trusted partner for all your technology needs.</p>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+                <div class="footer-section">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="products.html">Products</a></li>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                        <li><a href="faq.html">FAQ</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Customer Service</h4>
+                    <ul>
+                        <li><a href="contact.html">Support</a></li>
+                        <li><a href="terms.html">Terms & Conditions</a></li>
+                        <li><a href="privacy.html">Privacy Policy</a></li>
+                        <li><a href="404.html">Returns</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Contact Info</h4>
+                    <ul>
+                        <li><i class="fas fa-phone"></i> +1 (555) 123-4567</li>
+                        <li><i class="fas fa-envelope"></i> info@techstore.com</li>
+                        <li><i class="fas fa-map-marker-alt"></i> 123 Tech Street, Digital City</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 TechStore. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+</body>
+</html>

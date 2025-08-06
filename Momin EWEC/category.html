@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Browse products by category - Find exactly what you're looking for">
+    <title>Category - TechStore</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <a href="index.html">TechStore</a>
+            </div>
+            <div class="nav-menu" id="nav-menu">
+                <a href="index.html" class="nav-link">Home</a>
+                <a href="products.html" class="nav-link">Products</a>
+                <a href="about.html" class="nav-link">About</a>
+                <a href="contact.html" class="nav-link">Contact</a>
+                <a href="blog.html" class="nav-link">Blog</a>
+                <a href="cart.html" class="nav-link cart-link">
+                    <i class="fas fa-shopping-cart"></i>
+                    <span class="cart-count">0</span>
+                </a>
+                <a href="wishlist.html" class="nav-link">
+                    <i class="fas fa-heart"></i>
+                </a>
+                <a href="login.html" class="nav-link">
+                    <i class="fas fa-user"></i>
+                </a>
+            </div>
+            <div class="nav-toggle" id="nav-toggle">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Page Header -->
+    <section class="page-header">
+        <div class="container">
+            <h1 id="category-title">Category</h1>
+            <nav class="breadcrumb">
+                <a href="index.html">Home</a>
+                <span>/</span>
+                <a href="products.html">Products</a>
+                <span>/</span>
+                <span id="category-breadcrumb">Category</span>
+            </nav>
+        </div>
+    </section>
+
+    <!-- Category Banner -->
+    <section class="category-banner" id="category-banner">
+        <div class="container">
+            <div class="banner-content">
+                <div class="banner-text">
+                    <h2 id="banner-title">Explore Our Products</h2>
+                    <p id="banner-description">Discover high-quality technology products tailored to your needs</p>
+                </div>
+                <div class="banner-icon">
+                    <i class="fas fa-laptop" id="banner-icon"></i>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Products Section -->
+    <section class="products-section">
+        <div class="container">
+            <div class="products-layout">
+                <!-- Sidebar -->
+                <aside class="products-sidebar">
+                    <div class="filter-section">
+                        <h3>Search</h3>
+                        <div class="search-box">
+                            <input type="text" id="product-search" placeholder="Search products...">
+                            <button type="button" id="search-btn">
+                                <i class="fas fa-search"></i>
+                            </button>
+                        </div>
+                    </div>
+
+                    <div class="filter-section">
+                        <h3>Categories</h3>
+                        <div class="filter-options">
+                            <label>
+                                <input type="radio" name="category" value="all" class="category-filter">
+                                <span>All Products</span>
+                            </label>
+                            <label>
+                                <input type="radio" name="category" value="laptops" class="category-filter">
+                                <span>Laptops</span>
+                            </label>
+                            <label>
+                                <input type="radio" name="category" value="smartphones" class="category-filter">
+                                <span>Smartphones</span>
+                            </label>
+                            <label>
+                                <input type="radio" name="category" value="audio" class="category-filter">
+                                <span>Audio</span>
+                            </label>
+                            <label>
+                                <input type="radio" name="category" value="accessories" class="category-filter">
+                                <span>Accessories</span>
+                            </label>
+                        </div>
+                    </div>
+
+                    <div class="filter-section">
+                        <h3>Price Range</h3>
+                        <div class="price-range">
+                            <input type="range" id="price-slider" min="0" max="2000" value="2000">
+                            <div class="price-display">
+                                <span>$0 - $<span id="price-value">2000</span></span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="filter-section">
+                        <h3>Brand</h3>
+                        <div class="filter-options">
+                            <label>
+                                <input type="checkbox" value="apple" class="brand-filter">
+                                <span>Apple</span>
+                            </label>
+                            <label>
+                                <input type="checkbox" value="samsung" class="brand-filter">
+                                <span>Samsung</span>
+                            </label>
+                            <label>
+                                <input type="checkbox" value="sony" class="brand-filter">
+                                <span>Sony</span>
+                            </label>
+                            <label>
+                                <input type="checkbox" value="hp" class="brand-filter">
+                                <span>HP</span>
+                            </label>
+                            <label>
+                                <input type="checkbox" value="dell" class="brand-filter">
+                                <span>Dell</span>
+                            </label>
+                        </div>
+                    </div>
+
+                    <div class="filter-section">
+                        <h3>Customer Rating</h3>
+                        <div class="filter-options">
+                            <label>
+                                <input type="checkbox" value="5" class="rating-filter">
+                                <span>
+                                    <div class="stars">
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                    </div>
+                                    <span>5 Stars</span>
+                                </span>
+                            </label>
+                            <label>
+                                <input type="checkbox" value="4" class="rating-filter">
+                                <span>
+                                    <div class="stars">
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="far fa-star"></i>
+                                    </div>
+                                    <span>4+ Stars</span>
+                                </span>
+                            </label>
+                            <label>
+                                <input type="checkbox" value="3" class="rating-filter">
+                                <span>
+                                    <div class="stars">
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="far fa-star"></i>
+                                        <i class="far fa-star"></i>
+                                    </div>
+                                    <span>3+ Stars</span>
+                                </span>
+                            </label>
+                        </div>
+                    </div>
+
+                    <div class="filter-section">
+                        <h3>Sort By</h3>
+                        <select id="sort-select">
+                            <option value="name">Name</option>
+                            <option value="price-low">Price: Low to High</option>
+                            <option value="price-high">Price: High to Low</option>
+                            <option value="rating">Customer Rating</option>
+                            <option value="newest">Newest</option>
+                            <option value="popular">Most Popular</option>
+                        </select>
+                    </div>
+
+                    <div class="filter-section">
+                        <button class="btn btn-outline clear-filters" id="clear-filters">
+                            <i class="fas fa-times"></i>
+                            Clear All Filters
+                        </button>
+                    </div>
+                </aside>
+
+                <!-- Products Grid -->
+                <main class="products-main">
+                    <div class="products-header">
+                        <p class="products-count">Showing <span id="product-count">0</span> products</p>
+                        <button class="mobile-filter-toggle" id="mobile-filter-toggle">
+                            <i class="fas fa-filter"></i> Filters
+                        </button>
+                    </div>
+
+                    <div class="product-grid" id="products-grid">
+                        <!-- Products will be dynamically loaded here -->
+                    </div>
+
+                    <div class="no-results" id="no-results" style="display: none;">
+                        <div class="no-results-icon">
+                            <i class="fas fa-search"></i>
+                        </div>
+                        <h3>No products found</h3>
+                        <p>Try adjusting your filters or search terms to find what you're looking for.</p>
+                        <button class="btn btn-primary" id="clear-all-filters">Clear All Filters</button>
+                    </div>
+
+                    <div class="pagination" id="pagination">
+                        <button class="pagination-btn" id="prev-page" disabled>
+                            <i class="fas fa-chevron-left"></i> Previous
+                        </button>
+                        <div class="page-numbers" id="page-numbers">
+                            <span class="page-number active">1</span>
+                        </div>
+                        <button class="pagination-btn" id="next-page">
+                            Next <i class="fas fa-chevron-right"></i>
+                        </button>
+                    </div>
+                </main>
+            </div>
+        </div>
+    </section>
+
+    <!-- Recently Viewed -->
+    <section class="recently-viewed-section">
+        <div class="container">
+            <h2>Recently Viewed</h2>
+            <div class="product-grid" id="recently-viewed-products">
+                <!-- Recently viewed products will be loaded here -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>TechStore</h3>
+                    <p>Your trusted partner for all your technology needs.</p>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+                <div class="footer-section">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="products.html">Products</a></li>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                        <li><a href="faq.html">FAQ</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Customer Service</h4>
+                    <ul>
+                        <li><a href="contact.html">Support</a></li>
+                        <li><a href="terms.html">Terms & Conditions</a></li>
+                        <li><a href="privacy.html">Privacy Policy</a></li>
+                        <li><a href="404.html">Returns</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Contact Info</h4>
+                    <ul>
+                        <li><i class="fas fa-phone"></i> +1 (555) 123-4567</li>
+                        <li><i class="fas fa-envelope"></i> info@techstore.com</li>
+                        <li><i class="fas fa-map-marker-alt"></i> 123 Tech Street, Digital City</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 TechStore. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+</body>
+</html>

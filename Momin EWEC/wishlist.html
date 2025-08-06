@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Your wishlist - Save your favorite products for later">
+    <title>Wishlist - TechStore</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <a href="index.html">TechStore</a>
+            </div>
+            <div class="nav-menu" id="nav-menu">
+                <a href="index.html" class="nav-link">Home</a>
+                <a href="products.html" class="nav-link">Products</a>
+                <a href="about.html" class="nav-link">About</a>
+                <a href="contact.html" class="nav-link">Contact</a>
+                <a href="blog.html" class="nav-link">Blog</a>
+                <a href="cart.html" class="nav-link cart-link">
+                    <i class="fas fa-shopping-cart"></i>
+                    <span class="cart-count">0</span>
+                </a>
+                <a href="wishlist.html" class="nav-link active">
+                    <i class="fas fa-heart"></i>
+                </a>
+                <a href="login.html" class="nav-link">
+                    <i class="fas fa-user"></i>
+                </a>
+            </div>
+            <div class="nav-toggle" id="nav-toggle">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Page Header -->
+    <section class="page-header">
+        <div class="container">
+            <h1>My Wishlist</h1>
+            <nav class="breadcrumb">
+                <a href="index.html">Home</a>
+                <span>/</span>
+                <span>Wishlist</span>
+            </nav>
+        </div>
+    </section>
+
+    <!-- Wishlist Content -->
+    <section class="wishlist-section">
+        <div class="container">
+            <div class="wishlist-header">
+                <div class="wishlist-info">
+                    <h2>Saved Items</h2>
+                    <p class="wishlist-count">You have <span id="wishlist-item-count">0</span> items in your wishlist</p>
+                </div>
+                <div class="wishlist-actions">
+                    <button class="btn btn-outline" id="clear-wishlist">
+                        <i class="fas fa-trash"></i>
+                        Clear All
+                    </button>
+                    <button class="btn btn-secondary" id="share-wishlist">
+                        <i class="fas fa-share-alt"></i>
+                        Share Wishlist
+                    </button>
+                </div>
+            </div>
+
+            <!-- Wishlist Items -->
+            <div class="wishlist-content">
+                <div class="wishlist-items" id="wishlist-items">
+                    <!-- Wishlist items will be dynamically loaded here -->
+                </div>
+
+                <!-- Empty Wishlist -->
+                <div class="empty-wishlist" id="empty-wishlist">
+                    <div class="empty-wishlist-icon">
+                        <i class="fas fa-heart"></i>
+                    </div>
+                    <h3>Your wishlist is empty</h3>
+                    <p>Save items you love for easy access later. Start browsing and add products to your wishlist!</p>
+                    <a href="products.html" class="btn btn-primary">Start Shopping</a>
+                </div>
+            </div>
+
+            <!-- Wishlist Actions Bar -->
+            <div class="wishlist-actions-bar" id="wishlist-actions-bar" style="display: none;">
+                <div class="selected-items">
+                    <span id="selected-count">0</span> items selected
+                </div>
+                <div class="bulk-actions">
+                    <button class="btn btn-primary" id="add-selected-to-cart">
+                        <i class="fas fa-shopping-cart"></i>
+                        Add Selected to Cart
+                    </button>
+                    <button class="btn btn-outline" id="remove-selected">
+                        <i class="fas fa-trash"></i>
+                        Remove Selected
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Recently Viewed -->
+    <section class="recently-viewed-section">
+        <div class="container">
+            <h2>Recently Viewed</h2>
+            <div class="product-grid" id="recently-viewed-products">
+                <div class="product-card" data-product-id="13">
+                    <div class="product-image">
+                        <div class="placeholder-image">
+                            <i class="fas fa-camera"></i>
+                        </div>
+                        <button class="wishlist-btn" data-product-id="13">
+                            <i class="fas fa-heart"></i>
+                        </button>
+                    </div>
+                    <div class="product-info">
+                        <h3>Digital Camera</h3>
+                        <p class="product-price">$799.99</p>
+                        <button class="btn btn-primary add-to-cart" data-product-id="13">Add to Cart</button>
+                    </div>
+                </div>
+                <div class="product-card" data-product-id="14">
+                    <div class="product-image">
+                        <div class="placeholder-image">
+                            <i class="fas fa-speaker"></i>
+                        </div>
+                        <button class="wishlist-btn" data-product-id="14">
+                            <i class="fas fa-heart"></i>
+                        </button>
+                    </div>
+                    <div class="product-info">
+                        <h3>Bluetooth Speaker</h3>
+                        <p class="product-price">$129.99</p>
+                        <button class="btn btn-primary add-to-cart" data-product-id="14">Add to Cart</button>
+                    </div>
+                </div>
+                <div class="product-card" data-product-id="15">
+                    <div class="product-image">
+                        <div class="placeholder-image">
+                            <i class="fas fa-watch"></i>
+                        </div>
+                        <button class="wishlist-btn" data-product-id="15">
+                            <i class="fas fa-heart"></i>
+                        </button>
+                    </div>
+                    <div class="product-info">
+                        <h3>Smartwatch</h3>
+                        <p class="product-price">$399.99</p>
+                        <button class="btn btn-primary add-to-cart" data-product-id="15">Add to Cart</button>
+                    </div>
+                </div>
+                <div class="product-card" data-product-id="16">
+                    <div class="product-image">
+                        <div class="placeholder-image">
+                            <i class="fas fa-hard-drive"></i>
+                        </div>
+                        <button class="wishlist-btn" data-product-id="16">
+                            <i class="fas fa-heart"></i>
+                        </button>
+                    </div>
+                    <div class="product-info">
+                        <h3>External SSD</h3>
+                        <p class="product-price">$199.99</p>
+                        <button class="btn btn-primary add-to-cart" data-product-id="16">Add to Cart</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Recommendations -->
+    <section class="recommendations-section">
+        <div class="container">
+            <h2>Recommended for You</h2>
+            <div class="product-grid">
+                <div class="product-card" data-product-id="17">
+                    <div class="product-image">
+                        <div class="placeholder-image">
+                            <i class="fas fa-router"></i>
+                        </div>
+                        <button class="wishlist-btn" data-product-id="17">
+                            <i class="fas fa-heart"></i>
+                        </button>
+                    </div>
+                    <div class="product-info">
+                        <h3>WiFi Router</h3>
+                        <p class="product-price">$149.99</p>
+                        <button class="btn btn-primary add-to-cart" data-product-id="17">Add to Cart</button>
+                    </div>
+                </div>
+                <div class="product-card" data-product-id="18">
+                    <div class="product-image">
+                        <div class="placeholder-image">
+                            <i class="fas fa-microchip"></i>
+                        </div>
+                        <button class="wishlist-btn" data-product-id="18">
+                            <i class="fas fa-heart"></i>
+                        </button>
+                    </div>
+                    <div class="product-info">
+                        <h3>RAM Memory</h3>
+                        <p class="product-price">$89.99</p>
+                        <button class="btn btn-primary add-to-cart" data-product-id="18">Add to Cart</button>
+                    </div>
+                </div>
+                <div class="product-card" data-product-id="19">
+                    <div class="product-image">
+                        <div class="placeholder-image">
+                            <i class="fas fa-power-off"></i>
+                        </div>
+                        <button class="wishlist-btn" data-product-id="19">
+                            <i class="fas fa-heart"></i>
+                        </button>
+                    </div>
+                    <div class="product-info">
+                        <h3>Power Bank</h3>
+                        <p class="product-price">$49.99</p>
+                        <button class="btn btn-primary add-to-cart" data-product-id="19">Add to Cart</button>
+                    </div>
+                </div>
+                <div class="product-card" data-product-id="20">
+                    <div class="product-image">
+                        <div class="placeholder-image">
+                            <i class="fas fa-usb"></i>
+                        </div>
+                        <button class="wishlist-btn" data-product-id="20">
+                            <i class="fas fa-heart"></i>
+                        </button>
+                    </div>
+                    <div class="product-info">
+                        <h3>USB Flash Drive</h3>
+                        <p class="product-price">$24.99</p>
+                        <button class="btn btn-primary add-to-cart" data-product-id="20">Add to Cart</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Share Modal -->
+    <div class="modal" id="share-modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3>Share Your Wishlist</h3>
+                <button class="modal-close" id="close-share-modal">
+                    <i class="fas fa-times"></i>
+                </button>
+            </div>
+            <div class="modal-body">
+                <p>Share your wishlist with friends and family:</p>
+                <div class="share-options">
+                    <button class="share-btn" data-platform="facebook">
+                        <i class="fab fa-facebook"></i>
+                        Facebook
+                    </button>
+                    <button class="share-btn" data-platform="twitter">
+                        <i class="fab fa-twitter"></i>
+                        Twitter
+                    </button>
+                    <button class="share-btn" data-platform="email">
+                        <i class="fas fa-envelope"></i>
+                        Email
+                    </button>
+                    <button class="share-btn" data-platform="copy">
+                        <i class="fas fa-copy"></i>
+                        Copy Link
+                    </button>
+                </div>
+                <div class="share-link">
+                    <label>Wishlist Link:</label>
+                    <div class="link-container">
+                        <input type="text" id="wishlist-link" value="https://techstore.com/wishlist/abc123" readonly>
+                        <button class="btn btn-secondary" id="copy-link">Copy</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>TechStore</h3>
+                    <p>Your trusted partner for all your technology needs.</p>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+                <div class="footer-section">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="products.html">Products</a></li>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                        <li><a href="faq.html">FAQ</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Customer Service</h4>
+                    <ul>
+                        <li><a href="contact.html">Support</a></li>
+                        <li><a href="terms.html">Terms & Conditions</a></li>
+                        <li><a href="privacy.html">Privacy Policy</a></li>
+                        <li><a href="404.html">Returns</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Contact Info</h4>
+                    <ul>
+                        <li><i class="fas fa-phone"></i> +1 (555) 123-4567</li>
+                        <li><i class="fas fa-envelope"></i> info@techstore.com</li>
+                        <li><i class="fas fa-map-marker-alt"></i> 123 Tech Street, Digital City</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 TechStore. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+</body>
+</html>

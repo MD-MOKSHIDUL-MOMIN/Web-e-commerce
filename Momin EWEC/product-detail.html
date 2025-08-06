@@ -1,0 +1,452 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Premium Laptop - High-performance laptop for professionals">
+    <title>Premium Laptop - TechStore</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <a href="index.html">TechStore</a>
+            </div>
+            <div class="nav-menu" id="nav-menu">
+                <a href="index.html" class="nav-link">Home</a>
+                <a href="products.html" class="nav-link">Products</a>
+                <a href="about.html" class="nav-link">About</a>
+                <a href="contact.html" class="nav-link">Contact</a>
+                <a href="blog.html" class="nav-link">Blog</a>
+                <a href="cart.html" class="nav-link cart-link">
+                    <i class="fas fa-shopping-cart"></i>
+                    <span class="cart-count">0</span>
+                </a>
+                <a href="wishlist.html" class="nav-link">
+                    <i class="fas fa-heart"></i>
+                </a>
+                <a href="login.html" class="nav-link">
+                    <i class="fas fa-user"></i>
+                </a>
+            </div>
+            <div class="nav-toggle" id="nav-toggle">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Breadcrumb -->
+    <section class="breadcrumb-section">
+        <div class="container">
+            <nav class="breadcrumb">
+                <a href="index.html">Home</a>
+                <span>/</span>
+                <a href="products.html">Products</a>
+                <span>/</span>
+                <a href="category.html?cat=laptops">Laptops</a>
+                <span>/</span>
+                <span>Premium Laptop</span>
+            </nav>
+        </div>
+    </section>
+
+    <!-- Product Detail -->
+    <section class="product-detail">
+        <div class="container">
+            <div class="product-detail-layout">
+                <div class="product-images">
+                    <div class="main-image">
+                        <div class="placeholder-image large">
+                            <i class="fas fa-laptop"></i>
+                        </div>
+                    </div>
+                    <div class="thumbnail-images">
+                        <div class="thumbnail active">
+                            <div class="placeholder-image small">
+                                <i class="fas fa-laptop"></i>
+                            </div>
+                        </div>
+                        <div class="thumbnail">
+                            <div class="placeholder-image small">
+                                <i class="fas fa-laptop"></i>
+                            </div>
+                        </div>
+                        <div class="thumbnail">
+                            <div class="placeholder-image small">
+                                <i class="fas fa-laptop"></i>
+                            </div>
+                        </div>
+                        <div class="thumbnail">
+                            <div class="placeholder-image small">
+                                <i class="fas fa-laptop"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="product-info">
+                    <h1>Premium Laptop</h1>
+                    <div class="product-rating">
+                        <div class="stars">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star-half-alt"></i>
+                        </div>
+                        <span class="rating-text">(4.5/5 - 128 reviews)</span>
+                    </div>
+
+                    <div class="product-price">
+                        <span class="current-price">$1,299.99</span>
+                        <span class="original-price">$1,599.99</span>
+                        <span class="discount">Save 19%</span>
+                    </div>
+
+                    <div class="product-description">
+                        <p>Experience ultimate performance with our Premium Laptop. Featuring the latest processor, high-resolution display, and all-day battery life, this laptop is perfect for professionals and creators alike.</p>
+                    </div>
+
+                    <div class="product-specifications">
+                        <h3>Key Features:</h3>
+                        <ul>
+                            <li>Intel Core i7 Processor</li>
+                            <li>16GB RAM, 512GB SSD</li>
+                            <li>15.6" 4K Display</li>
+                            <li>NVIDIA GeForce GTX Graphics</li>
+                            <li>Up to 12 hours battery life</li>
+                            <li>Windows 11 Pro</li>
+                        </ul>
+                    </div>
+
+                    <div class="product-options">
+                        <div class="option-group">
+                            <label>Color:</label>
+                            <div class="color-options">
+                                <button class="color-option active" data-color="silver" style="background-color: #c0c0c0;"></button>
+                                <button class="color-option" data-color="black" style="background-color: #000;"></button>
+                                <button class="color-option" data-color="gold" style="background-color: #ffd700;"></button>
+                            </div>
+                        </div>
+
+                        <div class="option-group">
+                            <label for="storage">Storage:</label>
+                            <select id="storage">
+                                <option value="512gb">512GB SSD (+$0)</option>
+                                <option value="1tb">1TB SSD (+$200)</option>
+                                <option value="2tb">2TB SSD (+$500)</option>
+                            </select>
+                        </div>
+
+                        <div class="option-group">
+                            <label for="warranty">Warranty:</label>
+                            <select id="warranty">
+                                <option value="1year">1 Year Standard</option>
+                                <option value="2year">2 Year Extended (+$99)</option>
+                                <option value="3year">3 Year Premium (+$199)</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <div class="product-quantity">
+                        <label for="quantity">Quantity:</label>
+                        <div class="quantity-controls">
+                            <button class="quantity-btn" id="decrease-qty">-</button>
+                            <input type="number" id="quantity" value="1" min="1" max="10">
+                            <button class="quantity-btn" id="increase-qty">+</button>
+                        </div>
+                    </div>
+
+                    <div class="product-actions">
+                        <button class="btn btn-primary btn-large add-to-cart" data-product-id="1">
+                            <i class="fas fa-shopping-cart"></i>
+                            Add to Cart
+                        </button>
+                        <button class="btn btn-secondary wishlist-btn" data-product-id="1">
+                            <i class="fas fa-heart"></i>
+                            Add to Wishlist
+                        </button>
+                        <button class="btn btn-outline">
+                            <i class="fas fa-share-alt"></i>
+                            Share
+                        </button>
+                    </div>
+
+                    <div class="product-delivery">
+                        <div class="delivery-info">
+                            <i class="fas fa-truck"></i>
+                            <span>Free delivery on orders over $500</span>
+                        </div>
+                        <div class="delivery-info">
+                            <i class="fas fa-undo"></i>
+                            <span>30-day return policy</span>
+                        </div>
+                        <div class="delivery-info">
+                            <i class="fas fa-shield-alt"></i>
+                            <span>2-year warranty included</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Product Tabs -->
+    <section class="product-tabs">
+        <div class="container">
+            <div class="tabs-navigation">
+                <button class="tab-btn active" data-tab="description">Description</button>
+                <button class="tab-btn" data-tab="specifications">Specifications</button>
+                <button class="tab-btn" data-tab="reviews">Reviews</button>
+                <button class="tab-btn" data-tab="shipping">Shipping</button>
+            </div>
+
+            <div class="tabs-content">
+                <div class="tab-panel active" id="description">
+                    <h3>Product Description</h3>
+                    <p>The Premium Laptop delivers exceptional performance and reliability for demanding users. Built with premium materials and cutting-edge technology, this laptop is designed to handle everything from intensive work tasks to creative projects with ease.</p>
+                    <p>The sleek design features a durable aluminum body that's both lightweight and sturdy. The high-resolution display provides crisp, vibrant visuals perfect for both work and entertainment. With advanced cooling technology, the laptop maintains optimal performance even during extended use.</p>
+                    <p>Whether you're a professional, student, or creative, this laptop offers the perfect balance of power, portability, and style to meet your needs.</p>
+                </div>
+
+                <div class="tab-panel" id="specifications">
+                    <h3>Technical Specifications</h3>
+                    <div class="spec-table">
+                        <div class="spec-row">
+                            <span class="spec-label">Processor:</span>
+                            <span class="spec-value">Intel Core i7-12700H</span>
+                        </div>
+                        <div class="spec-row">
+                            <span class="spec-label">Memory:</span>
+                            <span class="spec-value">16GB DDR4 RAM</span>
+                        </div>
+                        <div class="spec-row">
+                            <span class="spec-label">Storage:</span>
+                            <span class="spec-value">512GB NVMe SSD</span>
+                        </div>
+                        <div class="spec-row">
+                            <span class="spec-label">Display:</span>
+                            <span class="spec-value">15.6" 4K UHD (3840x2160)</span>
+                        </div>
+                        <div class="spec-row">
+                            <span class="spec-label">Graphics:</span>
+                            <span class="spec-value">NVIDIA GeForce RTX 3060</span>
+                        </div>
+                        <div class="spec-row">
+                            <span class="spec-label">Battery:</span>
+                            <span class="spec-value">80Wh Li-ion, up to 12 hours</span>
+                        </div>
+                        <div class="spec-row">
+                            <span class="spec-label">Weight:</span>
+                            <span class="spec-value">4.2 lbs (1.9 kg)</span>
+                        </div>
+                        <div class="spec-row">
+                            <span class="spec-label">Dimensions:</span>
+                            <span class="spec-value">14.1 x 9.6 x 0.7 inches</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="tab-panel" id="reviews">
+                    <h3>Customer Reviews</h3>
+                    <div class="reviews-summary">
+                        <div class="rating-overview">
+                            <div class="average-rating">4.5</div>
+                            <div class="stars-large">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star-half-alt"></i>
+                            </div>
+                            <p>Based on 128 reviews</p>
+                        </div>
+                        <div class="rating-breakdown">
+                            <div class="rating-bar">
+                                <span>5 stars</span>
+                                <div class="bar-container">
+                                    <div class="bar" style="width: 70%;"></div>
+                                </div>
+                                <span>70%</span>
+                            </div>
+                            <div class="rating-bar">
+                                <span>4 stars</span>
+                                <div class="bar-container">
+                                    <div class="bar" style="width: 20%;"></div>
+                                </div>
+                                <span>20%</span>
+                            </div>
+                            <div class="rating-bar">
+                                <span>3 stars</span>
+                                <div class="bar-container">
+                                    <div class="bar" style="width: 7%;"></div>
+                                </div>
+                                <span>7%</span>
+                            </div>
+                            <div class="rating-bar">
+                                <span>2 stars</span>
+                                <div class="bar-container">
+                                    <div class="bar" style="width: 2%;"></div>
+                                </div>
+                                <span>2%</span>
+                            </div>
+                            <div class="rating-bar">
+                                <span>1 star</span>
+                                <div class="bar-container">
+                                    <div class="bar" style="width: 1%;"></div>
+                                </div>
+                                <span>1%</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="tab-panel" id="shipping">
+                    <h3>Shipping Information</h3>
+                    <div class="shipping-options">
+                        <div class="shipping-option">
+                            <h4>Standard Shipping</h4>
+                            <p>Free on orders over $500 | 5-7 business days</p>
+                        </div>
+                        <div class="shipping-option">
+                            <h4>Express Shipping</h4>
+                            <p>$19.99 | 2-3 business days</p>
+                        </div>
+                        <div class="shipping-option">
+                            <h4>Overnight Shipping</h4>
+                            <p>$39.99 | Next business day</p>
+                        </div>
+                    </div>
+                    <div class="return-policy">
+                        <h4>Return Policy</h4>
+                        <p>We offer a 30-day return policy for all unopened items in original condition. Custom configured items may have different return terms.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Related Products -->
+    <section class="related-products">
+        <div class="container">
+            <h2>You May Also Like</h2>
+            <div class="product-grid">
+                <div class="product-card" data-product-id="5">
+                    <div class="product-image">
+                        <div class="placeholder-image">
+                            <i class="fas fa-laptop"></i>
+                        </div>
+                        <button class="wishlist-btn" data-product-id="5">
+                            <i class="fas fa-heart"></i>
+                        </button>
+                    </div>
+                    <div class="product-info">
+                        <h3>Gaming Laptop</h3>
+                        <p class="product-price">$1,599.99</p>
+                        <button class="btn btn-primary add-to-cart" data-product-id="5">Add to Cart</button>
+                    </div>
+                </div>
+                <div class="product-card" data-product-id="6">
+                    <div class="product-image">
+                        <div class="placeholder-image">
+                            <i class="fas fa-laptop"></i>
+                        </div>
+                        <button class="wishlist-btn" data-product-id="6">
+                            <i class="fas fa-heart"></i>
+                        </button>
+                    </div>
+                    <div class="product-info">
+                        <h3>Ultrabook Pro</h3>
+                        <p class="product-price">$999.99</p>
+                        <button class="btn btn-primary add-to-cart" data-product-id="6">Add to Cart</button>
+                    </div>
+                </div>
+                <div class="product-card" data-product-id="7">
+                    <div class="product-image">
+                        <div class="placeholder-image">
+                            <i class="fas fa-mouse"></i>
+                        </div>
+                        <button class="wishlist-btn" data-product-id="7">
+                            <i class="fas fa-heart"></i>
+                        </button>
+                    </div>
+                    <div class="product-info">
+                        <h3>Wireless Mouse</h3>
+                        <p class="product-price">$79.99</p>
+                        <button class="btn btn-primary add-to-cart" data-product-id="7">Add to Cart</button>
+                    </div>
+                </div>
+                <div class="product-card" data-product-id="8">
+                    <div class="product-image">
+                        <div class="placeholder-image">
+                            <i class="fas fa-laptop"></i>
+                        </div>
+                        <button class="wishlist-btn" data-product-id="8">
+                            <i class="fas fa-heart"></i>
+                        </button>
+                    </div>
+                    <div class="product-info">
+                        <h3>Laptop Stand</h3>
+                        <p class="product-price">$49.99</p>
+                        <button class="btn btn-primary add-to-cart" data-product-id="8">Add to Cart</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>TechStore</h3>
+                    <p>Your trusted partner for all your technology needs.</p>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+                <div class="footer-section">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="products.html">Products</a></li>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                        <li><a href="faq.html">FAQ</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Customer Service</h4>
+                    <ul>
+                        <li><a href="contact.html">Support</a></li>
+                        <li><a href="terms.html">Terms & Conditions</a></li>
+                        <li><a href="privacy.html">Privacy Policy</a></li>
+                        <li><a href="404.html">Returns</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Contact Info</h4>
+                    <ul>
+                        <li><i class="fas fa-phone"></i> +1 (555) 123-4567</li>
+                        <li><i class="fas fa-envelope"></i> info@techstore.com</li>
+                        <li><i class="fas fa-map-marker-alt"></i> 123 Tech Street, Digital City</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 TechStore. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+</body>
+</html>

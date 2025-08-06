@@ -1,0 +1,496 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Frequently asked questions about TechStore products, shipping, returns, and more">
+    <title>FAQ - TechStore</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <a href="index.html">TechStore</a>
+            </div>
+            <div class="nav-menu" id="nav-menu">
+                <a href="index.html" class="nav-link">Home</a>
+                <a href="products.html" class="nav-link">Products</a>
+                <a href="about.html" class="nav-link">About</a>
+                <a href="contact.html" class="nav-link">Contact</a>
+                <a href="blog.html" class="nav-link">Blog</a>
+                <a href="cart.html" class="nav-link cart-link">
+                    <i class="fas fa-shopping-cart"></i>
+                    <span class="cart-count">0</span>
+                </a>
+                <a href="wishlist.html" class="nav-link">
+                    <i class="fas fa-heart"></i>
+                </a>
+                <a href="login.html" class="nav-link">
+                    <i class="fas fa-user"></i>
+                </a>
+            </div>
+            <div class="nav-toggle" id="nav-toggle">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Page Header -->
+    <section class="page-header">
+        <div class="container">
+            <h1>Frequently Asked Questions</h1>
+            <nav class="breadcrumb">
+                <a href="index.html">Home</a>
+                <span>/</span>
+                <span>FAQ</span>
+            </nav>
+        </div>
+    </section>
+
+    <!-- FAQ Search -->
+    <section class="faq-search">
+        <div class="container">
+            <div class="search-container">
+                <h2>How can we help you?</h2>
+                <div class="search-box">
+                    <input type="text" id="faq-search" placeholder="Search for answers...">
+                    <button type="button" id="search-faq-btn">
+                        <i class="fas fa-search"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Categories -->
+    <section class="faq-categories">
+        <div class="container">
+            <h2>Browse by Category</h2>
+            <div class="categories-grid">
+                <a href="#orders" class="category-link" data-category="orders">
+                    <div class="category-icon">
+                        <i class="fas fa-shopping-bag"></i>
+                    </div>
+                    <h3>Orders & Shipping</h3>
+                    <p>Track orders, shipping info, delivery times</p>
+                </a>
+                <a href="#returns" class="category-link" data-category="returns">
+                    <div class="category-icon">
+                        <i class="fas fa-undo"></i>
+                    </div>
+                    <h3>Returns & Refunds</h3>
+                    <p>Return policy, refund process, exchanges</p>
+                </a>
+                <a href="#products" class="category-link" data-category="products">
+                    <div class="category-icon">
+                        <i class="fas fa-laptop"></i>
+                    </div>
+                    <h3>Products & Support</h3>
+                    <p>Product specs, warranties, technical support</p>
+                </a>
+                <a href="#account" class="category-link" data-category="account">
+                    <div class="category-icon">
+                        <i class="fas fa-user-circle"></i>
+                    </div>
+                    <h3>Account & Security</h3>
+                    <p>Account settings, passwords, privacy</p>
+                </a>
+                <a href="#payment" class="category-link" data-category="payment">
+                    <div class="category-icon">
+                        <i class="fas fa-credit-card"></i>
+                    </div>
+                    <h3>Payment & Billing</h3>
+                    <p>Payment methods, billing issues, pricing</p>
+                </a>
+                <a href="#general" class="category-link" data-category="general">
+                    <div class="category-icon">
+                        <i class="fas fa-question-circle"></i>
+                    </div>
+                    <h3>General Questions</h3>
+                    <p>Company info, policies, other questions</p>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Content -->
+    <section class="faq-content">
+        <div class="container">
+            <!-- Orders & Shipping -->
+            <div class="faq-category" id="orders">
+                <h2>Orders & Shipping</h2>
+                <div class="faq-list">
+                    <div class="faq-item">
+                        <button class="faq-question">
+                            <span>How long does shipping take?</span>
+                            <i class="fas fa-chevron-down"></i>
+                        </button>
+                        <div class="faq-answer">
+                            <p>We offer three shipping options:</p>
+                            <ul>
+                                <li><strong>Standard Shipping:</strong> 5-7 business days (Free on orders over $500)</li>
+                                <li><strong>Express Shipping:</strong> 2-3 business days ($19.99)</li>
+                                <li><strong>Overnight Shipping:</strong> Next business day ($39.99)</li>
+                            </ul>
+                            <p>Shipping times may vary during peak seasons or due to weather conditions.</p>
+                        </div>
+                    </div>
+
+                    <div class="faq-item">
+                        <button class="faq-question">
+                            <span>How can I track my order?</span>
+                            <i class="fas fa-chevron-down"></i>
+                        </button>
+                        <div class="faq-answer">
+                            <p>Once your order ships, you'll receive a tracking number via email. You can:</p>
+                            <ul>
+                                <li>Use the tracking link in your shipping confirmation email</li>
+                                <li>Log into your account and view order history</li>
+                                <li>Contact our customer service team for assistance</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="faq-item">
+                        <button class="faq-question">
+                            <span>Do you ship internationally?</span>
+                            <i class="fas fa-chevron-down"></i>
+                        </button>
+                        <div class="faq-answer">
+                            <p>Currently, we only ship within the United States. We're working on expanding our shipping options to include international destinations. Please check back for updates!</p>
+                        </div>
+                    </div>
+
+                    <div class="faq-item">
+                        <button class="faq-question">
+                            <span>Can I change or cancel my order?</span>
+                            <i class="fas fa-chevron-down"></i>
+                        </button>
+                        <div class="faq-answer">
+                            <p>You can modify or cancel your order within 1 hour of placing it. After that, orders are processed for shipping and cannot be changed. Contact us immediately at (555) 123-4567 if you need to make changes.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Returns & Refunds -->
+            <div class="faq-category" id="returns">
+                <h2>Returns & Refunds</h2>
+                <div class="faq-list">
+                    <div class="faq-item">
+                        <button class="faq-question">
+                            <span>What is your return policy?</span>
+                            <i class="fas fa-chevron-down"></i>
+                        </button>
+                        <div class="faq-answer">
+                            <p>We offer a 30-day return policy for most items. Products must be:</p>
+                            <ul>
+                                <li>In original condition and packaging</li>
+                                <li>Unopened (for software and consumables)</li>
+                                <li>Returned within 30 days of delivery</li>
+                                <li>Include all accessories and documentation</li>
+                            </ul>
+                            <p>Custom-configured items may have different return terms.</p>
+                        </div>
+                    </div>
+
+                    <div class="faq-item">
+                        <button class="faq-question">
+                            <span>How do I return an item?</span>
+                            <i class="fas fa-chevron-down"></i>
+                        </button>
+                        <div class="faq-answer">
+                            <p>To return an item:</p>
+                            <ol>
+                                <li>Log into your account and go to order history</li>
+                                <li>Select the order and click "Return Item"</li>
+                                <li>Choose your reason for return and print the return label</li>
+                                <li>Package the item securely and attach the return label</li>
+                                <li>Drop off at any authorized shipping location</li>
+                            </ol>
+                        </div>
+                    </div>
+
+                    <div class="faq-item">
+                        <button class="faq-question">
+                            <span>When will I receive my refund?</span>
+                            <i class="fas fa-chevron-down"></i>
+                        </button>
+                        <div class="faq-answer">
+                            <p>Refunds are processed within 3-5 business days after we receive your returned item. The refund will appear on your original payment method within 5-10 business days, depending on your bank or credit card company.</p>
+                        </div>
+                    </div>
+
+                    <div class="faq-item">
+                        <button class="faq-question">
+                            <span>Can I exchange an item instead of returning it?</span>
+                            <i class="fas fa-chevron-down"></i>
+                        </button>
+                        <div class="faq-answer">
+                            <p>Yes! We offer exchanges for the same product in a different size, color, or model (if price difference applies). Contact our customer service team to arrange an exchange.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Products & Support -->
+            <div class="faq-category" id="products">
+                <h2>Products & Support</h2>
+                <div class="faq-list">
+                    <div class="faq-item">
+                        <button class="faq-question">
+                            <span>Are your products genuine and new?</span>
+                            <i class="fas fa-chevron-down"></i>
+                        </button>
+                        <div class="faq-answer">
+                            <p>Absolutely! All products sold by TechStore are 100% genuine, new, and come with full manufacturer warranties. We work directly with authorized distributors and manufacturers to ensure authenticity.</p>
+                        </div>
+                    </div>
+
+                    <div class="faq-item">
+                        <button class="faq-question">
+                            <span>Do you offer technical support?</span>
+                            <i class="fas fa-chevron-down"></i>
+                        </button>
+                        <div class="faq-answer">
+                            <p>Yes! We provide free technical support for all products purchased from TechStore. Our certified technicians are available 24/7 to help with setup, troubleshooting, and general questions.</p>
+                        </div>
+                    </div>
+
+                    <div class="faq-item">
+                        <button class="faq-question">
+                            <span>What warranty do you offer?</span>
+                            <i class="fas fa-chevron-down"></i>
+                        </button>
+                        <div class="faq-answer">
+                            <p>All products come with the manufacturer's standard warranty. Additionally, we offer extended warranty options at checkout for added protection. Warranty terms vary by product - check individual product pages for details.</p>
+                        </div>
+                    </div>
+
+                    <div class="faq-item">
+                        <button class="faq-question">
+                            <span>Can you help me choose the right product?</span>
+                            <i class="fas fa-chevron-down"></i>
+                        </button>
+                        <div class="faq-answer">
+                            <p>Of course! Our product experts are here to help you find the perfect solution for your needs. Contact us via phone, email, or live chat, and we'll provide personalized recommendations based on your requirements and budget.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Account & Security -->
+            <div class="faq-category" id="account">
+                <h2>Account & Security</h2>
+                <div class="faq-list">
+                    <div class="faq-item">
+                        <button class="faq-question">
+                            <span>How do I create an account?</span>
+                            <i class="fas fa-chevron-down"></i>
+                        </button>
+                        <div class="faq-answer">
+                            <p>Creating an account is easy! Click the "Sign Up" button in the top right corner, fill out the registration form with your email and password, and verify your email address. You can also sign up using your Google, Facebook, or Apple account.</p>
+                        </div>
+                    </div>
+
+                    <div class="faq-item">
+                        <button class="faq-question">
+                            <span>I forgot my password. How can I reset it?</span>
+                            <i class="fas fa-chevron-down"></i>
+                        </button>
+                        <div class="faq-answer">
+                            <p>No problem! Go to the login page and click "Forgot Password." Enter your email address, and we'll send you a secure link to reset your password. If you don't receive the email, check your spam folder or contact us for help.</p>
+                        </div>
+                    </div>
+
+                    <div class="faq-item">
+                        <button class="faq-question">
+                            <span>How do I update my account information?</span>
+                            <i class="fas fa-chevron-down"></i>
+                        </button>
+                        <div class="faq-answer">
+                            <p>Log into your account and go to "Account Settings." There you can update your personal information, shipping addresses, payment methods, and communication preferences.</p>
+                        </div>
+                    </div>
+
+                    <div class="faq-item">
+                        <button class="faq-question">
+                            <span>Is my personal information secure?</span>
+                            <i class="fas fa-chevron-down"></i>
+                        </button>
+                        <div class="faq-answer">
+                            <p>Yes! We use industry-standard encryption and security measures to protect your personal information. We never share your data with third parties without your consent. Read our <a href="privacy.html">Privacy Policy</a> for complete details.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Payment & Billing -->
+            <div class="faq-category" id="payment">
+                <h2>Payment & Billing</h2>
+                <div class="faq-list">
+                    <div class="faq-item">
+                        <button class="faq-question">
+                            <span>What payment methods do you accept?</span>
+                            <i class="fas fa-chevron-down"></i>
+                        </button>
+                        <div class="faq-answer">
+                            <p>We accept all major credit and debit cards (Visa, MasterCard, American Express, Discover), PayPal, Apple Pay, Google Pay, and financing options through our partner lenders.</p>
+                        </div>
+                    </div>
+
+                    <div class="faq-item">
+                        <button class="faq-question">
+                            <span>Do you offer financing options?</span>
+                            <i class="fas fa-chevron-down"></i>
+                        </button>
+                        <div class="faq-answer">
+                            <p>Yes! We partner with leading financial institutions to offer flexible financing options with competitive rates. Apply at checkout to see your options - often with 0% APR for qualified buyers.</p>
+                        </div>
+                    </div>
+
+                    <div class="faq-item">
+                        <button class="faq-question">
+                            <span>When will I be charged for my order?</span>
+                            <i class="fas fa-chevron-down"></i>
+                        </button>
+                        <div class="faq-answer">
+                            <p>Your payment method is authorized when you place the order, but you're only charged when your items ship. For backordered items, you'll be charged as each item becomes available and ships.</p>
+                        </div>
+                    </div>
+
+                    <div class="faq-item">
+                        <button class="faq-question">
+                            <span>Do you price match?</span>
+                            <i class="fas fa-chevron-down"></i>
+                        </button>
+                        <div class="faq-answer">
+                            <p>Yes! We offer price matching on identical products from authorized retailers. Contact us before purchasing with proof of the lower price, and we'll match it. Some restrictions apply - see our full price match policy for details.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- General Questions -->
+            <div class="faq-category" id="general">
+                <h2>General Questions</h2>
+                <div class="faq-list">
+                    <div class="faq-item">
+                        <button class="faq-question">
+                            <span>How can I contact customer service?</span>
+                            <i class="fas fa-chevron-down"></i>
+                        </button>
+                        <div class="faq-answer">
+                            <p>We're here to help 24/7! Contact us via:</p>
+                            <ul>
+                                <li><strong>Phone:</strong> (555) 123-4567</li>
+                                <li><strong>Email:</strong> support@techstore.com</li>
+                                <li><strong>Live Chat:</strong> Available on our website</li>
+                                <li><strong>Social Media:</strong> @TechStore on all platforms</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="faq-item">
+                        <button class="faq-question">
+                            <span>Do you have a loyalty program?</span>
+                            <i class="fas fa-chevron-down"></i>
+                        </button>
+                        <div class="faq-answer">
+                            <p>Yes! Our TechRewards program is free to join. Earn points with every purchase, get exclusive member discounts, early access to sales, and special birthday offers. Points can be redeemed for discounts on future purchases.</p>
+                        </div>
+                    </div>
+
+                    <div class="faq-item">
+                        <button class="faq-question">
+                            <span>Can I shop without creating an account?</span>
+                            <i class="fas fa-chevron-down"></i>
+                        </button>
+                        <div class="faq-answer">
+                            <p>Yes, you can checkout as a guest. However, creating an account offers many benefits like order tracking, faster checkout, wishlist functionality, and exclusive member offers.</p>
+                        </div>
+                    </div>
+
+                    <div class="faq-item">
+                        <button class="faq-question">
+                            <span>How often do you add new products?</span>
+                            <i class="fas fa-chevron-down"></i>
+                        </button>
+                        <div class="faq-answer">
+                            <p>We constantly update our inventory with the latest technology products. New items are added weekly, and we always feature the newest releases from top brands. Subscribe to our newsletter to be notified about new arrivals!</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact CTA -->
+    <section class="faq-contact">
+        <div class="container">
+            <div class="contact-cta">
+                <h2>Still have questions?</h2>
+                <p>Our customer service team is here to help you 24/7</p>
+                <div class="contact-buttons">
+                    <a href="contact.html" class="btn btn-primary">Contact Us</a>
+                    <button class="btn btn-secondary" id="live-chat-faq">Start Live Chat</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>TechStore</h3>
+                    <p>Your trusted partner for all your technology needs.</p>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+                <div class="footer-section">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="products.html">Products</a></li>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                        <li><a href="faq.html">FAQ</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Customer Service</h4>
+                    <ul>
+                        <li><a href="contact.html">Support</a></li>
+                        <li><a href="terms.html">Terms & Conditions</a></li>
+                        <li><a href="privacy.html">Privacy Policy</a></li>
+                        <li><a href="404.html">Returns</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Contact Info</h4>
+                    <ul>
+                        <li><i class="fas fa-phone"></i> +1 (555) 123-4567</li>
+                        <li><i class="fas fa-envelope"></i> info@techstore.com</li>
+                        <li><i class="fas fa-map-marker-alt"></i> 123 Tech Street, Digital City</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 TechStore. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+</body>
+</html>

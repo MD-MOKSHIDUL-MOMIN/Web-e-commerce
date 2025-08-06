@@ -1,0 +1,470 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Secure checkout - Complete your purchase safely and securely">
+    <title>Checkout - TechStore</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <a href="index.html">TechStore</a>
+            </div>
+            <div class="nav-menu" id="nav-menu">
+                <a href="index.html" class="nav-link">Home</a>
+                <a href="products.html" class="nav-link">Products</a>
+                <a href="about.html" class="nav-link">About</a>
+                <a href="contact.html" class="nav-link">Contact</a>
+                <a href="blog.html" class="nav-link">Blog</a>
+                <a href="cart.html" class="nav-link cart-link">
+                    <i class="fas fa-shopping-cart"></i>
+                    <span class="cart-count">0</span>
+                </a>
+                <a href="wishlist.html" class="nav-link">
+                    <i class="fas fa-heart"></i>
+                </a>
+                <a href="login.html" class="nav-link">
+                    <i class="fas fa-user"></i>
+                </a>
+            </div>
+            <div class="nav-toggle" id="nav-toggle">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Checkout Progress -->
+    <section class="checkout-progress">
+        <div class="container">
+            <div class="progress-steps">
+                <div class="step completed">
+                    <div class="step-icon">
+                        <i class="fas fa-shopping-cart"></i>
+                    </div>
+                    <span>Cart</span>
+                </div>
+                <div class="step active">
+                    <div class="step-icon">
+                        <i class="fas fa-truck"></i>
+                    </div>
+                    <span>Shipping</span>
+                </div>
+                <div class="step">
+                    <div class="step-icon">
+                        <i class="fas fa-credit-card"></i>
+                    </div>
+                    <span>Payment</span>
+                </div>
+                <div class="step">
+                    <div class="step-icon">
+                        <i class="fas fa-check"></i>
+                    </div>
+                    <span>Complete</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Checkout Content -->
+    <section class="checkout-section">
+        <div class="container">
+            <div class="checkout-layout">
+                <!-- Checkout Form -->
+                <div class="checkout-main">
+                    <form class="checkout-form" id="checkout-form">
+                        <!-- Customer Information -->
+                        <div class="form-section">
+                            <h2>Contact Information</h2>
+                            <div class="guest-checkout">
+                                <p>Already have an account? <a href="login.html">Sign in</a></p>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="email-address">Email Address *</label>
+                                <input type="email" id="email-address" name="email" required>
+                                <div class="error-message"></div>
+                            </div>
+                            
+                            <div class="form-group checkbox-group">
+                                <label>
+                                    <input type="checkbox" id="marketing-emails" name="marketing">
+                                    <span class="checkmark"></span>
+                                    Email me with news and offers
+                                </label>
+                            </div>
+                        </div>
+
+                        <!-- Shipping Address -->
+                        <div class="form-section">
+                            <h2>Shipping Address</h2>
+                            
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label for="first-name">First Name *</label>
+                                    <input type="text" id="first-name" name="firstName" required>
+                                    <div class="error-message"></div>
+                                </div>
+                                <div class="form-group">
+                                    <label for="last-name">Last Name *</label>
+                                    <input type="text" id="last-name" name="lastName" required>
+                                    <div class="error-message"></div>
+                                </div>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="address">Address *</label>
+                                <input type="text" id="address" name="address" placeholder="Street address" required>
+                                <div class="error-message"></div>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="apartment">Apartment, suite, etc.</label>
+                                <input type="text" id="apartment" name="apartment" placeholder="Apartment, suite, etc. (optional)">
+                            </div>
+                            
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label for="city">City *</label>
+                                    <input type="text" id="city" name="city" required>
+                                    <div class="error-message"></div>
+                                </div>
+                                <div class="form-group">
+                                    <label for="state">State *</label>
+                                    <select id="state" name="state" required>
+                                        <option value="">Select State</option>
+                                        <option value="AL">Alabama</option>
+                                        <option value="AK">Alaska</option>
+                                        <option value="AZ">Arizona</option>
+                                        <option value="AR">Arkansas</option>
+                                        <option value="CA">California</option>
+                                        <option value="CO">Colorado</option>
+                                        <option value="CT">Connecticut</option>
+                                        <option value="DE">Delaware</option>
+                                        <option value="FL">Florida</option>
+                                        <option value="GA">Georgia</option>
+                                        <!-- Add more states as needed -->
+                                    </select>
+                                    <div class="error-message"></div>
+                                </div>
+                                <div class="form-group">
+                                    <label for="zip">ZIP Code *</label>
+                                    <input type="text" id="zip" name="zip" required>
+                                    <div class="error-message"></div>
+                                </div>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="phone-number">Phone Number</label>
+                                <input type="tel" id="phone-number" name="phone" placeholder="For delivery notifications">
+                            </div>
+                            
+                            <div class="form-group checkbox-group">
+                                <label>
+                                    <input type="checkbox" id="save-address" name="saveAddress">
+                                    <span class="checkmark"></span>
+                                    Save this address for next time
+                                </label>
+                            </div>
+                        </div>
+
+                        <!-- Shipping Method -->
+                        <div class="form-section">
+                            <h2>Shipping Method</h2>
+                            <div class="shipping-methods">
+                                <label class="shipping-method">
+                                    <input type="radio" name="shippingMethod" value="standard" checked>
+                                    <div class="method-content">
+                                        <div class="method-info">
+                                            <span class="method-name">Standard Shipping</span>
+                                            <span class="method-time">5-7 business days</span>
+                                        </div>
+                                        <span class="method-price">Free</span>
+                                    </div>
+                                </label>
+                                
+                                <label class="shipping-method">
+                                    <input type="radio" name="shippingMethod" value="express">
+                                    <div class="method-content">
+                                        <div class="method-info">
+                                            <span class="method-name">Express Shipping</span>
+                                            <span class="method-time">2-3 business days</span>
+                                        </div>
+                                        <span class="method-price">$19.99</span>
+                                    </div>
+                                </label>
+                                
+                                <label class="shipping-method">
+                                    <input type="radio" name="shippingMethod" value="overnight">
+                                    <div class="method-content">
+                                        <div class="method-info">
+                                            <span class="method-name">Overnight Shipping</span>
+                                            <span class="method-time">Next business day</span>
+                                        </div>
+                                        <span class="method-price">$39.99</span>
+                                    </div>
+                                </label>
+                            </div>
+                        </div>
+
+                        <!-- Payment Information -->
+                        <div class="form-section">
+                            <h2>Payment Information</h2>
+                            
+                            <div class="payment-methods">
+                                <label class="payment-method">
+                                    <input type="radio" name="paymentMethod" value="card" checked>
+                                    <div class="method-content">
+                                        <i class="fas fa-credit-card"></i>
+                                        <span>Credit / Debit Card</span>
+                                    </div>
+                                </label>
+                                
+                                <label class="payment-method">
+                                    <input type="radio" name="paymentMethod" value="paypal">
+                                    <div class="method-content">
+                                        <i class="fab fa-paypal"></i>
+                                        <span>PayPal</span>
+                                    </div>
+                                </label>
+                                
+                                <label class="payment-method">
+                                    <input type="radio" name="paymentMethod" value="apple-pay">
+                                    <div class="method-content">
+                                        <i class="fab fa-apple-pay"></i>
+                                        <span>Apple Pay</span>
+                                    </div>
+                                </label>
+                            </div>
+                            
+                            <div class="card-details" id="card-details">
+                                <div class="form-group">
+                                    <label for="card-number">Card Number *</label>
+                                    <input type="text" id="card-number" name="cardNumber" placeholder="1234 5678 9012 3456" required>
+                                    <div class="error-message"></div>
+                                </div>
+                                
+                                <div class="form-row">
+                                    <div class="form-group">
+                                        <label for="expiry-month">Expiry Month *</label>
+                                        <select id="expiry-month" name="expiryMonth" required>
+                                            <option value="">Month</option>
+                                            <option value="01">01 - January</option>
+                                            <option value="02">02 - February</option>
+                                            <option value="03">03 - March</option>
+                                            <option value="04">04 - April</option>
+                                            <option value="05">05 - May</option>
+                                            <option value="06">06 - June</option>
+                                            <option value="07">07 - July</option>
+                                            <option value="08">08 - August</option>
+                                            <option value="09">09 - September</option>
+                                            <option value="10">10 - October</option>
+                                            <option value="11">11 - November</option>
+                                            <option value="12">12 - December</option>
+                                        </select>
+                                        <div class="error-message"></div>
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="expiry-year">Expiry Year *</label>
+                                        <select id="expiry-year" name="expiryYear" required>
+                                            <option value="">Year</option>
+                                            <option value="2025">2025</option>
+                                            <option value="2026">2026</option>
+                                            <option value="2027">2027</option>
+                                            <option value="2028">2028</option>
+                                            <option value="2029">2029</option>
+                                            <option value="2030">2030</option>
+                                            <option value="2031">2031</option>
+                                            <option value="2032">2032</option>
+                                        </select>
+                                        <div class="error-message"></div>
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="cvv">CVV *</label>
+                                        <input type="text" id="cvv" name="cvv" placeholder="123" maxlength="4" required>
+                                        <div class="error-message"></div>
+                                    </div>
+                                </div>
+                                
+                                <div class="form-group">
+                                    <label for="cardholder-name">Cardholder Name *</label>
+                                    <input type="text" id="cardholder-name" name="cardholderName" required>
+                                    <div class="error-message"></div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Billing Address -->
+                        <div class="form-section">
+                            <h2>Billing Address</h2>
+                            <div class="form-group checkbox-group">
+                                <label>
+                                    <input type="checkbox" id="same-as-shipping" name="sameAsShipping" checked>
+                                    <span class="checkmark"></span>
+                                    Same as shipping address
+                                </label>
+                            </div>
+                            
+                            <div class="billing-address" id="billing-address" style="display: none;">
+                                <!-- Billing address fields would go here -->
+                            </div>
+                        </div>
+
+                        <!-- Order Notes -->
+                        <div class="form-section">
+                            <h2>Order Notes</h2>
+                            <div class="form-group">
+                                <label for="order-notes">Special Instructions (Optional)</label>
+                                <textarea id="order-notes" name="orderNotes" rows="3" placeholder="Any special delivery instructions or notes about your order..."></textarea>
+                            </div>
+                        </div>
+
+                        <!-- Terms and Submit -->
+                        <div class="form-section">
+                            <div class="form-group checkbox-group">
+                                <label>
+                                    <input type="checkbox" id="agree-terms" name="agreeTerms" required>
+                                    <span class="checkmark"></span>
+                                    I agree to the <a href="terms.html" target="_blank">Terms and Conditions</a> and <a href="privacy.html" target="_blank">Privacy Policy</a> *
+                                </label>
+                                <div class="error-message"></div>
+                            </div>
+                            
+                            <button type="submit" class="btn btn-primary btn-large checkout-submit">
+                                <i class="fas fa-lock"></i>
+                                Complete Order
+                            </button>
+                        </div>
+                    </form>
+                </div>
+
+                <!-- Order Summary -->
+                <div class="checkout-sidebar">
+                    <div class="order-summary">
+                        <h3>Order Summary</h3>
+                        
+                        <div class="order-items" id="checkout-items">
+                            <!-- Order items will be loaded here -->
+                        </div>
+                        
+                        <div class="summary-totals">
+                            <div class="summary-row">
+                                <span>Subtotal:</span>
+                                <span id="checkout-subtotal">$0.00</span>
+                            </div>
+                            
+                            <div class="summary-row">
+                                <span>Shipping:</span>
+                                <span id="checkout-shipping">$0.00</span>
+                            </div>
+                            
+                            <div class="summary-row">
+                                <span>Tax:</span>
+                                <span id="checkout-tax">$0.00</span>
+                            </div>
+                            
+                            <hr>
+                            
+                            <div class="summary-row total-row">
+                                <span>Total:</span>
+                                <span id="checkout-total">$0.00</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Security Badges -->
+                    <div class="security-badges">
+                        <div class="security-badge">
+                            <i class="fas fa-shield-alt"></i>
+                            <span>SSL Secured</span>
+                        </div>
+                        <div class="security-badge">
+                            <i class="fas fa-lock"></i>
+                            <span>256-bit Encryption</span>
+                        </div>
+                        <div class="security-badge">
+                            <i class="fas fa-credit-card"></i>
+                            <span>PCI Compliant</span>
+                        </div>
+                    </div>
+
+                    <!-- Help -->
+                    <div class="checkout-help">
+                        <h4>Need Help?</h4>
+                        <p>Our customer service team is here to assist you.</p>
+                        <div class="help-options">
+                            <a href="contact.html" class="help-link">
+                                <i class="fas fa-phone"></i>
+                                Call: (555) 123-4567
+                            </a>
+                            <a href="contact.html" class="help-link">
+                                <i class="fas fa-envelope"></i>
+                                Email Support
+                            </a>
+                            <a href="#" class="help-link" id="live-chat">
+                                <i class="fas fa-comments"></i>
+                                Live Chat
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>TechStore</h3>
+                    <p>Your trusted partner for all your technology needs.</p>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+                <div class="footer-section">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="products.html">Products</a></li>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                        <li><a href="faq.html">FAQ</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Customer Service</h4>
+                    <ul>
+                        <li><a href="contact.html">Support</a></li>
+                        <li><a href="terms.html">Terms & Conditions</a></li>
+                        <li><a href="privacy.html">Privacy Policy</a></li>
+                        <li><a href="404.html">Returns</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Contact Info</h4>
+                    <ul>
+                        <li><i class="fas fa-phone"></i> +1 (555) 123-4567</li>
+                        <li><i class="fas fa-envelope"></i> info@techstore.com</li>
+                        <li><i class="fas fa-map-marker-alt"></i> 123 Tech Street, Digital City</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 TechStore. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+</body>
+</html>

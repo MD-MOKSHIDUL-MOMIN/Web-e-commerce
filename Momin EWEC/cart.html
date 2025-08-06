@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Your shopping cart - Review and manage your selected items">
+    <title>Shopping Cart - TechStore</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <a href="index.html">TechStore</a>
+            </div>
+            <div class="nav-menu" id="nav-menu">
+                <a href="index.html" class="nav-link">Home</a>
+                <a href="products.html" class="nav-link">Products</a>
+                <a href="about.html" class="nav-link">About</a>
+                <a href="contact.html" class="nav-link">Contact</a>
+                <a href="blog.html" class="nav-link">Blog</a>
+                <a href="cart.html" class="nav-link cart-link active">
+                    <i class="fas fa-shopping-cart"></i>
+                    <span class="cart-count">0</span>
+                </a>
+                <a href="wishlist.html" class="nav-link">
+                    <i class="fas fa-heart"></i>
+                </a>
+                <a href="login.html" class="nav-link">
+                    <i class="fas fa-user"></i>
+                </a>
+            </div>
+            <div class="nav-toggle" id="nav-toggle">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Page Header -->
+    <section class="page-header">
+        <div class="container">
+            <h1>Shopping Cart</h1>
+            <nav class="breadcrumb">
+                <a href="index.html">Home</a>
+                <span>/</span>
+                <span>Cart</span>
+            </nav>
+        </div>
+    </section>
+
+    <!-- Cart Content -->
+    <section class="cart-section">
+        <div class="container">
+            <div class="cart-layout">
+                <!-- Cart Items -->
+                <div class="cart-main">
+                    <div class="cart-header">
+                        <h2>Your Cart Items</h2>
+                        <button class="btn btn-outline" id="clear-cart">
+                            <i class="fas fa-trash"></i>
+                            Clear Cart
+                        </button>
+                    </div>
+
+                    <div class="cart-items" id="cart-items">
+                        <!-- Cart items will be dynamically loaded here -->
+                        <div class="empty-cart" id="empty-cart">
+                            <div class="empty-cart-icon">
+                                <i class="fas fa-shopping-cart"></i>
+                            </div>
+                            <h3>Your cart is empty</h3>
+                            <p>Looks like you haven't added anything to your cart yet. Start shopping to fill it up!</p>
+                            <a href="products.html" class="btn btn-primary">Start Shopping</a>
+                        </div>
+                    </div>
+
+                    <!-- Continue Shopping -->
+                    <div class="cart-actions">
+                        <a href="products.html" class="btn btn-outline">
+                            <i class="fas fa-arrow-left"></i>
+                            Continue Shopping
+                        </a>
+                        <button class="btn btn-secondary" id="update-cart">
+                            <i class="fas fa-sync"></i>
+                            Update Cart
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Cart Summary -->
+                <div class="cart-sidebar">
+                    <div class="cart-summary">
+                        <h3>Order Summary</h3>
+                        
+                        <div class="summary-row">
+                            <span>Subtotal:</span>
+                            <span id="subtotal">$0.00</span>
+                        </div>
+                        
+                        <div class="summary-row">
+                            <span>Shipping:</span>
+                            <span id="shipping-cost">$0.00</span>
+                        </div>
+                        
+                        <div class="summary-row">
+                            <span>Tax:</span>
+                            <span id="tax-amount">$0.00</span>
+                        </div>
+                        
+                        <div class="summary-row discount-row" id="discount-row" style="display: none;">
+                            <span>Discount:</span>
+                            <span id="discount-amount">-$0.00</span>
+                        </div>
+                        
+                        <hr>
+                        
+                        <div class="summary-row total-row">
+                            <span>Total:</span>
+                            <span id="total-amount">$0.00</span>
+                        </div>
+
+                        <!-- Promo Code -->
+                        <div class="promo-code">
+                            <h4>Promo Code</h4>
+                            <div class="promo-input">
+                                <input type="text" id="promo-code" placeholder="Enter promo code">
+                                <button class="btn btn-secondary" id="apply-promo">Apply</button>
+                            </div>
+                            <div class="promo-message" id="promo-message"></div>
+                        </div>
+
+                        <!-- Shipping Options -->
+                        <div class="shipping-options">
+                            <h4>Shipping Options</h4>
+                            <label>
+                                <input type="radio" name="shipping" value="standard" checked>
+                                <span>Standard Shipping (5-7 days) - Free</span>
+                            </label>
+                            <label>
+                                <input type="radio" name="shipping" value="express">
+                                <span>Express Shipping (2-3 days) - $19.99</span>
+                            </label>
+                            <label>
+                                <input type="radio" name="shipping" value="overnight">
+                                <span>Overnight Shipping - $39.99</span>
+                            </label>
+                        </div>
+
+                        <!-- Checkout Button -->
+                        <a href="checkout.html" class="btn btn-primary btn-large checkout-btn" id="checkout-btn" style="display: none;">
+                            <i class="fas fa-lock"></i>
+                            Proceed to Checkout
+                        </a>
+                    </div>
+
+                    <!-- Security Info -->
+                    <div class="security-info">
+                        <div class="security-item">
+                            <i class="fas fa-shield-alt"></i>
+                            <span>Secure Checkout</span>
+                        </div>
+                        <div class="security-item">
+                            <i class="fas fa-truck"></i>
+                            <span>Free Shipping on $500+</span>
+                        </div>
+                        <div class="security-item">
+                            <i class="fas fa-undo"></i>
+                            <span>30-Day Returns</span>
+                        </div>
+                    </div>
+
+                    <!-- Recently Viewed -->
+                    <div class="recently-viewed">
+                        <h4>Recently Viewed</h4>
+                        <div class="recent-items" id="recent-items">
+                            <!-- Recently viewed items will be loaded here -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Recommended Products -->
+    <section class="recommended-products">
+        <div class="container">
+            <h2>You Might Also Like</h2>
+            <div class="product-grid">
+                <div class="product-card" data-product-id="9">
+                    <div class="product-image">
+                        <div class="placeholder-image">
+                            <i class="fas fa-keyboard"></i>
+                        </div>
+                        <button class="wishlist-btn" data-product-id="9">
+                            <i class="fas fa-heart"></i>
+                        </button>
+                    </div>
+                    <div class="product-info">
+                        <h3>Mechanical Keyboard</h3>
+                        <p class="product-price">$149.99</p>
+                        <button class="btn btn-primary add-to-cart" data-product-id="9">Add to Cart</button>
+                    </div>
+                </div>
+                <div class="product-card" data-product-id="10">
+                    <div class="product-image">
+                        <div class="placeholder-image">
+                            <i class="fas fa-mouse"></i>
+                        </div>
+                        <button class="wishlist-btn" data-product-id="10">
+                            <i class="fas fa-heart"></i>
+                        </button>
+                    </div>
+                    <div class="product-info">
+                        <h3>Gaming Mouse</h3>
+                        <p class="product-price">$79.99</p>
+                        <button class="btn btn-primary add-to-cart" data-product-id="10">Add to Cart</button>
+                    </div>
+                </div>
+                <div class="product-card" data-product-id="11">
+                    <div class="product-image">
+                        <div class="placeholder-image">
+                            <i class="fas fa-desktop"></i>
+                        </div>
+                        <button class="wishlist-btn" data-product-id="11">
+                            <i class="fas fa-heart"></i>
+                        </button>
+                    </div>
+                    <div class="product-info">
+                        <h3>4K Monitor</h3>
+                        <p class="product-price">$399.99</p>
+                        <button class="btn btn-primary add-to-cart" data-product-id="11">Add to Cart</button>
+                    </div>
+                </div>
+                <div class="product-card" data-product-id="12">
+                    <div class="product-image">
+                        <div class="placeholder-image">
+                            <i class="fas fa-usb"></i>
+                        </div>
+                        <button class="wishlist-btn" data-product-id="12">
+                            <i class="fas fa-heart"></i>
+                        </button>
+                    </div>
+                    <div class="product-info">
+                        <h3>USB-C Hub</h3>
+                        <p class="product-price">$59.99</p>
+                        <button class="btn btn-primary add-to-cart" data-product-id="12">Add to Cart</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>TechStore</h3>
+                    <p>Your trusted partner for all your technology needs.</p>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+                <div class="footer-section">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="products.html">Products</a></li>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                        <li><a href="faq.html">FAQ</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Customer Service</h4>
+                    <ul>
+                        <li><a href="contact.html">Support</a></li>
+                        <li><a href="terms.html">Terms & Conditions</a></li>
+                        <li><a href="privacy.html">Privacy Policy</a></li>
+                        <li><a href="404.html">Returns</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Contact Info</h4>
+                    <ul>
+                        <li><i class="fas fa-phone"></i> +1 (555) 123-4567</li>
+                        <li><i class="fas fa-envelope"></i> info@techstore.com</li>
+                        <li><i class="fas fa-map-marker-alt"></i> 123 Tech Street, Digital City</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 TechStore. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+</body>
+</html>
